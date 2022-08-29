@@ -1,0 +1,61 @@
+<div class="card shadow mb-4 margin">
+  <div class="card-header text-primary">
+    Assiduite
+
+    <div class="float-end">
+      <a href="#" class="previous ms-2" (click)="previous()">&#8249;</a>
+      <a href="#" class="next ms-2 " (click)="next()">&#8250;</a>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table  table-striped table-hover">
+        <thead>
+          <tr>
+
+          <tr>
+            <th scope="col " class="text-primary">Date</th>
+            <th *ngFor="let date of horaire">
+              <div class="text-center text-primary">{{date}}</div>
+              <div class="float-end text-primary"></div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let matiere of presence">
+            <td>{{matiere.date}}</td>
+            <td>
+              <div class="text-center pill"
+                [style.background]="matiere.huitHeurePresence=='present'?'PaleGreen':'LightSalmon'">
+                {{matiere.huitHeureMatiere}}</div>
+            </td>
+            <td>
+              <div class="text-center pill"
+                [style.background]="matiere.dixHeurePresence=='present'?'PaleGreen':'LightSalmon'">
+                {{matiere.dixHeureMatiere}}</div>
+            </td>
+            <td>
+              <div class="text-center pill"
+                [style.background]="matiere.quatorzeHeureAbsence=='present'?'PaleGreen':'LightSalmon'">
+                {{matiere.quatorzHeureMatiere}}</div>
+            </td>
+            <td>
+              <div class="text-center pill"
+                [style.background]="matiere.seizeHeureAbsence=='present'?'PaleGreen':'LightSalmon'">
+                {{matiere.seizeHeureMatiere}}</div>
+            </td>
+
+
+          </tr>
+
+
+
+        </tbody>
+      </table>
+    </div>
+
+
+
+    <footer class="blockquote-footer">toute absence non justifiée sera sanctionnée<cite title="Source Title"></cite>
+    </footer>

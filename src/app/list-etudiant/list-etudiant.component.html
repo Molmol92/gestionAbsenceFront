@@ -1,0 +1,58 @@
+
+<div class="card shadow mb-4 margin">
+    <div class="card-header text-primary">
+        Liste des étudiants
+
+
+    </div>
+
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-striped ">
+                <thead>
+                    <tr>
+                        <th scope="col" class=" text-center text-primary" style="width: 10%;">N°</th>
+                        <th scope="col" class=" text-center text-primary" style="width: 10%;">Nom</th>
+                        <th scope="col" class=" text-center text-primary" >Prénom</th>
+                        <th scope="col" class=" text-primary" >Présence</th>
+                        <th scope="col" class=" text-center text-primary" style="width: 10%;">Note</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let etudiant of liste_etudiant; index as i">
+                        <td>
+                            <div class="text-center">{{i}}</div>
+                        </td>
+                        <td>
+                            <div class="text-center">{{etudiant.nomEtd}}</div>
+                        </td>
+                        <td>
+                            <div class="text-center">{{etudiant.prenomEtd}}</div>
+                        </td>
+
+                       <td>
+                        <ui-switch checkedLabel="Absent" uncheckedLabel="Présent"  color="LightSalmon" defaultBgColor="PaleGreen"></ui-switch>
+                        <!-- <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="btnradio+{{i}}" id="btnradio+{{i}}+present" autocomplete="off">
+                            <label class="btn btn-outline-success" for="btnradio+{{i}}+present">Présent</label>
+                            <input type="radio" class="btn-check" name="btnradio+{{i}}" id="btnradio+{{i}}+absent" autocomplete="off">
+                            <label class="btn btn-outline-danger" for="btnradio+{{i}}+absent">Absent</label>
+                        </div> -->
+                       </td>
+                        <td>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="note / 20"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                                <!-- <span class="input-group-text" id="basic-addon2">/20</span> -->
+                              </div>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button type="button" class="btn btn-primary float-end rounded-pill">Soumettre </button>
+    </div>
+</div>
+

@@ -1,0 +1,35 @@
+<div class="d-flex flex-column flex-shrink-0 p-3 bg-light bg-gradient-primary " >
+
+    <div class="text-light text-center " style="font-size: 1.5rem;">{{validUser.departement.nomDep}}</div>
+    <hr>
+   
+    <img src="/assets/images/profile_pic.png" class="mt-4 mb-4 mx-auto card-img-top rounded-circle img-thumbnail" alt="...">
+    <hr>
+    
+        
+        <div class="card-body">
+            <h5 class="card-title text-light" >{{validUser.nom}} {{validUser.prenom}}</h5>
+            <p *ngIf="role === '3'" class="card-text text-light">{{validUser.groupe.nomGroupe}}</p>
+           
+            <p class="card-text text-light">Semestre 2</p>
+        </div>
+        
+        
+    
+    <hr>
+    <div class="dropdown">
+      <a href="#" class="d-flex align-items-center text-light text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+       
+        <strong>mdo</strong>
+      </a>
+      <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+        <li><a class="dropdown-item" href="#">New project...</a></li>
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Sign out</a></li>
+      </ul>
+    </div>
+  </div>
+
+ 

@@ -1,0 +1,28 @@
+
+    <div class="card shadow mb-4 margin">
+        <div class="card-header text-primary">
+          Séances
+
+          <div class="float-end">
+            <a href="#" class="previous ms-2"  >&#8249;</a>
+            <a href="#" class="next ms-2 ">&#8250;</a>
+          </div>
+        </div>
+        <div class="card-body">
+            <div class="card" *ngFor="let card of presence">
+                <div class="card-header">
+                    {{card.date}}
+                </div>
+                <div class="card-body">
+                  <blockquote class="blockquote mb-0">
+                    <p>A well-known quote, contained in a blockquote element.</p>
+                    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                  </blockquote>
+                </div>
+              </div>
+                
+              
+            <footer class="blockquote-footer">toute absence non justifiée sera sanctionnée<cite title="Source Title"></cite></footer>
+          
+
+    

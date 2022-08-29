@@ -1,0 +1,41 @@
+<div class="container">
+  <select class='select-option btn btn-primary dropdown-toggle ms-3'>
+    <option disabled selected>Matière</option>
+    <option class='option'
+            *ngFor="let matiere of liste_matieres"
+            [value]="matiere.nomMat">{{matiere.nomMat}}</option>
+  </select>
+
+
+  <select class='select-option btn btn-primary dropdown-toggle ms-3'>
+    <option disabled selected>Séance</option>
+    <option class='option'
+            *ngFor="let seance of seances"
+            [value]="seance.seanceNom">{{seance.seanceNom}}</option>
+  </select>
+
+
+  <select class='select-option btn btn-primary dropdown-toggle ms-3'
+          #mySelect
+          (change)="changeGroupe(mySelect.value)">
+    <option disabled selected>Groupe</option>
+    <option class='option'
+            *ngFor="let groupe of liste_groupe"
+            [value]="groupe.nomGroupe">{{groupe.nomGroupe}}</option>
+  </select>
+
+
+  <div class="form-check form-check-inline  ms-3 mt-3 ">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1">Test d'évaluation effectué ?</label>
+  </div>
+
+  <div class="d-inline  ">
+    <mat-form-field class="ms-3">
+      <input matInput [matDatepicker]="picker" placeholder="Choisissez une date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+</div>

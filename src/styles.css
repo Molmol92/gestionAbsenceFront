@@ -1,0 +1,18 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "cera";
+    src: local("cera"), url("assets/font/cera-round-pro-free-font/Demo_fonts/Fontspring-DEMO-ceraroundpro-regular.otf") format("truetype");
+}
+
+html{
+    font-family: "Quicksand";
+
+}
+body{
+    font-family: "Quicksand";
+
+}
+app-profile{
+  height: 1500px;
+}
